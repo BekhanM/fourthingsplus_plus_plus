@@ -1,4 +1,4 @@
-package app;
+package app.entities;
 
 public class User {
     private int userId;
@@ -11,6 +11,22 @@ public class User {
         this.userName = userName;
         this.password = password;
         this.role = role;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getRole() {
+        return role;
     }
 
     @Override

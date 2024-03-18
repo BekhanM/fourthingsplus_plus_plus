@@ -18,10 +18,12 @@
 <h1>Shalom, brother!</h1>
 
 
-<form class="login-form" method="post">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <button type="submit" formaction="/login">Log på</button>
+<form class="generic-form" method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password1" placeholder="Enter new password">
+    <input type="password" name="password2" placeholder="Enter new password again">
+
+    <button type="submit" formaction="/createuser">Create user</button>
 
     <div><p th:text="${message}"></p></div>
 </form>

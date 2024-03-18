@@ -19,19 +19,14 @@
 
 
 <form class="generic-form" method="post">
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <button type="submit" formaction="/login">Log på</button>
-
-    <div><p th:text="${message}"></p></div>
+    <input type="text" name="taskname" placeholder="Edit task." th:value="${task.name}">
+    <button type="submit" name="taskId" th:value="${task.taskid}" formaction="/updatetask">Update</button>
 </form>
 
 <div th:if="${session.currentUser != null}">
     <span th:text="${session.currentUser.username}"></span> |
     <a href="index.html" th:href="@{/logout}">Logout</a>
 </div>
-
-<p><a href="createuser.html" th:href="@{/createuser}">Create account</a> </p>
 
 </body>
 </html>
